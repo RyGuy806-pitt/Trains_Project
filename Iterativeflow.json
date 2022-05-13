@@ -1,0 +1,112 @@
+[
+    {
+        "id": "ab9a01642a098fb8",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ab2a2aacb8c53429",
+        "type": "inject",
+        "z": "ab9a01642a098fb8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 300,
+        "wires": [
+            [
+                "ecbf46815424499b"
+            ]
+        ]
+    },
+    {
+        "id": "ecbf46815424499b",
+        "type": "file in",
+        "z": "ab9a01642a098fb8",
+        "name": "C:\\Users\\ryguy\\OneDrive\\Desktop\\SPDVals.txt",
+        "filename": "C:\\Users\\ryguy\\OneDrive\\Documents\\Train_Controller\\ANALOG\\demo.txt",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": true,
+        "x": 500,
+        "y": 220,
+        "wires": [
+            [
+                "058b1e5e327c0b06",
+                "cd07653c3a268639"
+            ]
+        ]
+    },
+    {
+        "id": "058b1e5e327c0b06",
+        "type": "ui_text",
+        "z": "ab9a01642a098fb8",
+        "group": "5184f89f3c5c4c59",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "SerialIn2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 460,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "cd07653c3a268639",
+        "type": "debug",
+        "z": "ab9a01642a098fb8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "5184f89f3c5c4c59",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "a9ae17ee4b7886a1",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a9ae17ee4b7886a1",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
